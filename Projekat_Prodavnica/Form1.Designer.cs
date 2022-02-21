@@ -116,7 +116,7 @@
             this.ulazToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sToolStripMenuItem});
             this.ulazToolStripMenuItem.Name = "ulazToolStripMenuItem";
-            this.ulazToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.ulazToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ulazToolStripMenuItem.Text = "Ulaz";
             // 
             // sToolStripMenuItem
@@ -124,13 +124,14 @@
             this.sToolStripMenuItem.Name = "sToolStripMenuItem";
             this.sToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.sToolStripMenuItem.Text = "Prijemnica Robe - Kalkulacija";
+            this.sToolStripMenuItem.Click += new System.EventHandler(this.sToolStripMenuItem_Click);
             // 
             // izlazToolStripMenuItem
             // 
             this.izlazToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.racunOtpremniceToolStripMenuItem});
             this.izlazToolStripMenuItem.Name = "izlazToolStripMenuItem";
-            this.izlazToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.izlazToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.izlazToolStripMenuItem.Text = "Izlaz";
             // 
             // racunOtpremniceToolStripMenuItem
@@ -142,7 +143,7 @@
             // cenovnikRobeToolStripMenuItem
             // 
             this.cenovnikRobeToolStripMenuItem.Name = "cenovnikRobeToolStripMenuItem";
-            this.cenovnikRobeToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.cenovnikRobeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cenovnikRobeToolStripMenuItem.Text = "Cenovnik Robe";
             // 
             // troskoviToolStripMenuItem
@@ -151,7 +152,7 @@
             this.zaradeRadnikaToolStripMenuItem,
             this.ostaliTroskoviToolStripMenuItem});
             this.troskoviToolStripMenuItem.Name = "troskoviToolStripMenuItem";
-            this.troskoviToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.troskoviToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.troskoviToolStripMenuItem.Text = "Troskovi";
             // 
             // zaradeRadnikaToolStripMenuItem

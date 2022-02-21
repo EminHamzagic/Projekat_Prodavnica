@@ -24,5 +24,11 @@ namespace Projekat_Prodavnica
             frm_Artikli Artikli = new frm_Artikli();
             Artikli.Show();
         }
+
+        private void sToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ulaz_Kalkulacija Uk = new Ulaz_Kalkulacija();
+            Uk.Show();
+        }
     }
 }
