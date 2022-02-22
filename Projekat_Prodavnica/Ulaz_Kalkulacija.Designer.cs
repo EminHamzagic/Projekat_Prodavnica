@@ -31,15 +31,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ulaz_Kalkulacija));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ulaz_Kalkulacija));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtPretDo = new System.Windows.Forms.DateTimePicker();
+            this.dtPretOd = new System.Windows.Forms.DateTimePicker();
             this.btnIzmeni_Zaglavlje = new System.Windows.Forms.Button();
             this.btn_Dodaj_Zaglavlje = new System.Windows.Forms.Button();
             this.btn_Pretrazi = new System.Windows.Forms.Button();
@@ -55,15 +55,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGrid_Zaglavlje_Kalkulacije = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Naziv_PP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JMBG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.v_radinka = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.k_ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lozinka = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit_Artikal = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Delete_Artikal = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_Izmeni_Dokument = new System.Windows.Forms.Button();
             this.btn_Dodaj_Dokument = new System.Windows.Forms.Button();
@@ -86,6 +77,15 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Naziv_PP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JMBG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.v_radinka = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.k_ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lozinka = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit_Zaglavlje = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Delete_Zaglavlje = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -101,8 +101,8 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Edit_Detalji = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Delete_Detalji = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Zaglavlje_Kalkulacije)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -113,8 +113,8 @@
             // 
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.dateTimePicker3);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.dtPretDo);
+            this.groupBox1.Controls.Add(this.dtPretOd);
             this.groupBox1.Controls.Add(this.btnIzmeni_Zaglavlje);
             this.groupBox1.Controls.Add(this.btn_Dodaj_Zaglavlje);
             this.groupBox1.Controls.Add(this.btn_Pretrazi);
@@ -155,21 +155,21 @@
             this.label15.TabIndex = 160;
             this.label15.Text = "Od:";
             // 
-            // dateTimePicker3
+            // dtPretDo
             // 
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(267, 73);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(110, 23);
-            this.dateTimePicker3.TabIndex = 159;
+            this.dtPretDo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtPretDo.Location = new System.Drawing.Point(267, 73);
+            this.dtPretDo.Name = "dtPretDo";
+            this.dtPretDo.Size = new System.Drawing.Size(110, 23);
+            this.dtPretDo.TabIndex = 159;
             // 
-            // dateTimePicker2
+            // dtPretOd
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(120, 73);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(110, 23);
-            this.dateTimePicker2.TabIndex = 158;
+            this.dtPretOd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtPretOd.Location = new System.Drawing.Point(120, 73);
+            this.dtPretOd.Name = "dtPretOd";
+            this.dtPretOd.Size = new System.Drawing.Size(110, 23);
+            this.dtPretOd.TabIndex = 158;
             // 
             // btnIzmeni_Zaglavlje
             // 
@@ -320,8 +320,8 @@
             this.v_radinka,
             this.k_ime,
             this.lozinka,
-            this.Edit_Artikal,
-            this.Delete_Artikal});
+            this.Edit_Zaglavlje,
+            this.Delete_Zaglavlje});
             this.dataGrid_Zaglavlje_Kalkulacije.EnableHeadersVisualStyles = false;
             this.dataGrid_Zaglavlje_Kalkulacije.Location = new System.Drawing.Point(0, 102);
             this.dataGrid_Zaglavlje_Kalkulacije.MultiSelect = false;
@@ -345,63 +345,6 @@
             this.dataGrid_Zaglavlje_Kalkulacije.Size = new System.Drawing.Size(776, 140);
             this.dataGrid_Zaglavlje_Kalkulacije.TabIndex = 130;
             this.dataGrid_Zaglavlje_Kalkulacije.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Zaglavlje_Kalkulacije_CellContentClick);
-            // 
-            // id
-            // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.id.HeaderText = "#";
-            this.id.Name = "id";
-            this.id.Width = 39;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // Naziv_PP
-            // 
-            this.Naziv_PP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Naziv_PP.HeaderText = "Broj Dokumenta";
-            this.Naziv_PP.Name = "Naziv_PP";
-            this.Naziv_PP.Width = 113;
-            // 
-            // JMBG
-            // 
-            this.JMBG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.JMBG.HeaderText = "Nacin Placanja";
-            this.JMBG.Name = "JMBG";
-            this.JMBG.Width = 105;
-            // 
-            // v_radinka
-            // 
-            this.v_radinka.HeaderText = "Naziv PP-a";
-            this.v_radinka.Name = "v_radinka";
-            // 
-            // k_ime
-            // 
-            this.k_ime.HeaderText = "Datum Dokumenta";
-            this.k_ime.Name = "k_ime";
-            // 
-            // lozinka
-            // 
-            this.lozinka.HeaderText = "Napomena";
-            this.lozinka.Name = "lozinka";
-            // 
-            // Edit_Artikal
-            // 
-            this.Edit_Artikal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Edit_Artikal.HeaderText = "";
-            this.Edit_Artikal.Image = ((System.Drawing.Image)(resources.GetObject("Edit_Artikal.Image")));
-            this.Edit_Artikal.Name = "Edit_Artikal";
-            this.Edit_Artikal.Width = 5;
-            // 
-            // Delete_Artikal
-            // 
-            this.Delete_Artikal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Delete_Artikal.HeaderText = "";
-            this.Delete_Artikal.Image = ((System.Drawing.Image)(resources.GetObject("Delete_Artikal.Image")));
-            this.Delete_Artikal.Name = "Delete_Artikal";
-            this.Delete_Artikal.Width = 5;
             // 
             // groupBox2
             // 
@@ -552,8 +495,8 @@
             this.Column3,
             this.Column4,
             this.Column5,
-            this.dataGridViewImageColumn1,
-            this.dataGridViewImageColumn2});
+            this.Edit_Detalji,
+            this.Delete_Detalji});
             this.dataGrid_Detalji_Kalkulacije.EnableHeadersVisualStyles = false;
             this.dataGrid_Detalji_Kalkulacije.Location = new System.Drawing.Point(0, 116);
             this.dataGrid_Detalji_Kalkulacije.MultiSelect = false;
@@ -576,6 +519,7 @@
             this.dataGrid_Detalji_Kalkulacije.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGrid_Detalji_Kalkulacije.Size = new System.Drawing.Size(776, 140);
             this.dataGrid_Detalji_Kalkulacije.TabIndex = 136;
+            this.dataGrid_Detalji_Kalkulacije.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Detalji_Kalkulacije_CellContentClick);
             // 
             // label14
             // 
@@ -657,6 +601,63 @@
             this.label6.Size = new System.Drawing.Size(107, 15);
             this.label6.TabIndex = 132;
             this.label6.Text = "Prod. Vred. sa PDV:";
+            // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.id.HeaderText = "#";
+            this.id.Name = "id";
+            this.id.Width = 39;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // Naziv_PP
+            // 
+            this.Naziv_PP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Naziv_PP.HeaderText = "Broj Dokumenta";
+            this.Naziv_PP.Name = "Naziv_PP";
+            this.Naziv_PP.Width = 113;
+            // 
+            // JMBG
+            // 
+            this.JMBG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.JMBG.HeaderText = "Nacin Placanja";
+            this.JMBG.Name = "JMBG";
+            this.JMBG.Width = 105;
+            // 
+            // v_radinka
+            // 
+            this.v_radinka.HeaderText = "Naziv PP-a";
+            this.v_radinka.Name = "v_radinka";
+            // 
+            // k_ime
+            // 
+            this.k_ime.HeaderText = "Datum Dokumenta";
+            this.k_ime.Name = "k_ime";
+            // 
+            // lozinka
+            // 
+            this.lozinka.HeaderText = "Napomena";
+            this.lozinka.Name = "lozinka";
+            // 
+            // Edit_Zaglavlje
+            // 
+            this.Edit_Zaglavlje.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Edit_Zaglavlje.HeaderText = "";
+            this.Edit_Zaglavlje.Image = ((System.Drawing.Image)(resources.GetObject("Edit_Zaglavlje.Image")));
+            this.Edit_Zaglavlje.Name = "Edit_Zaglavlje";
+            this.Edit_Zaglavlje.Width = 5;
+            // 
+            // Delete_Zaglavlje
+            // 
+            this.Delete_Zaglavlje.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Delete_Zaglavlje.HeaderText = "";
+            this.Delete_Zaglavlje.Image = ((System.Drawing.Image)(resources.GetObject("Delete_Zaglavlje.Image")));
+            this.Delete_Zaglavlje.Name = "Delete_Zaglavlje";
+            this.Delete_Zaglavlje.Width = 5;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -761,21 +762,21 @@
             this.Column5.HeaderText = "Marza Vred.";
             this.Column5.Name = "Column5";
             // 
-            // dataGridViewImageColumn1
+            // Edit_Detalji
             // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 5;
+            this.Edit_Detalji.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Edit_Detalji.HeaderText = "";
+            this.Edit_Detalji.Image = ((System.Drawing.Image)(resources.GetObject("Edit_Detalji.Image")));
+            this.Edit_Detalji.Name = "Edit_Detalji";
+            this.Edit_Detalji.Width = 5;
             // 
-            // dataGridViewImageColumn2
+            // Delete_Detalji
             // 
-            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn2.HeaderText = "";
-            this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Width = 5;
+            this.Delete_Detalji.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Delete_Detalji.HeaderText = "";
+            this.Delete_Detalji.Image = ((System.Drawing.Image)(resources.GetObject("Delete_Detalji.Image")));
+            this.Delete_Detalji.Name = "Delete_Detalji";
+            this.Delete_Detalji.Width = 5;
             // 
             // Ulaz_Kalkulacija
             // 
@@ -838,8 +839,8 @@
         private Label label6;
         private Label label16;
         private Label label15;
-        private DateTimePicker dateTimePicker3;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dtPretDo;
+        private DateTimePicker dtPretOd;
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn Naziv_PP;
@@ -847,8 +848,8 @@
         private DataGridViewTextBoxColumn v_radinka;
         private DataGridViewTextBoxColumn k_ime;
         private DataGridViewTextBoxColumn lozinka;
-        private DataGridViewImageColumn Edit_Artikal;
-        private DataGridViewImageColumn Delete_Artikal;
+        private DataGridViewImageColumn Edit_Zaglavlje;
+        private DataGridViewImageColumn Delete_Zaglavlje;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -864,7 +865,7 @@
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
-        private DataGridViewImageColumn dataGridViewImageColumn1;
-        private DataGridViewImageColumn dataGridViewImageColumn2;
+        private DataGridViewImageColumn Edit_Detalji;
+        private DataGridViewImageColumn Delete_Detalji;
     }
 }

@@ -32,6 +32,42 @@ namespace Projekat_Prodavnica
             id_zaglavlja_dokumenta =
             Int32.Parse(dataGrid_Zaglavlje_Kalkulacije.Rows[e.RowIndex].Cells[1].Value.ToString());
             Ucitaj_Detalje_Dokumenta();
+            int id_poslovnog_partnera;
+            string poslovni_partner_id;
+            string ime_kolone_pp_a = dataGrid_Zaglavlje_Kalkulacije.Columns[e.ColumnIndex].Name;
+            poslovni_partner_id = dataGrid_Zaglavlje_Kalkulacije.Rows[e.RowIndex].Cells[1].Value.ToString();
+            //dodeljivanje vrednosti id radnika u int obliku
+            id_poslovnog_partnera = Int32.Parse(poslovni_partner_id);
+            if (ime_kolone_pp_a == "Edit_Zaglavlje")
+            {
+                textBrojDokumenta.Text = dataGrid_Zaglavlje_Kalkulacije.Rows[e.RowIndex].Cells[2].Value.ToString();
+                cmbNacin_Placanja.SelectedItem = dataGrid_Zaglavlje_Kalkulacije.Rows[e.RowIndex].Cells[3].Value.ToString();
+                cmbNazivPP.SelectedItem = dataGrid_Zaglavlje_Kalkulacije.Rows[e.RowIndex].Cells[4].Value.ToString();
+                dtDatumDokumenta.Value = DateTime.Parse(dataGrid_Zaglavlje_Kalkulacije.Rows[e.RowIndex].Cells[5].Value.ToString());
+                textNapomena.Text = dataGrid_Zaglavlje_Kalkulacije.Rows[e.RowIndex].Cells[6].Value.ToString();
+            }
+            else if (ime_kolone_pp_a == "Delete_Zaglavlje")
+            {
+                try
+                {
+
+                    if (MessageBox.Show("Da li ste sigurni da želite da izbrišete selektovani red?", "Brisanje Radnika", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        cn.Open();
+                        cm = new SqlCommand("DELETE FROM ZAGLAVLJE_DOKUMENTA" +
+                         " WHERE id = " + dataGrid_Zaglavlje_Kalkulacije.Rows[e.RowIndex].Cells[1].Value.ToString() + "", cn);
+                        cm.ExecuteNonQuery();
+                        cn.Close();
+                        MessageBox.Show("Red je uspesno izbrisan", "Obaveštenje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Ucitaj_Artikle();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    cn.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void cmbNazivArtikla_SelectionChangeCommitted(object sender, EventArgs e)
@@ -119,6 +155,51 @@ namespace Projekat_Prodavnica
             dr.Close();
             cn.Close();
         }
+
+        private void dataGrid_Detalji_Kalkulacije_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int id_poslovnog_partnera;
+            string poslovni_partner_id;
+            string ime_kolone_pp_a = dataGrid_Detalji_Kalkulacije.Columns[e.ColumnIndex].Name;
+            poslovni_partner_id = dataGrid_Detalji_Kalkulacije.Rows[e.RowIndex].Cells[1].Value.ToString();
+            //dodeljivanje vrednosti id radnika u int obliku
+            id_poslovnog_partnera = Int32.Parse(poslovni_partner_id);
+            if (ime_kolone_pp_a == "Edit_Detalji")
+            {
+                cmbNazivArtikla.SelectedItem = dataGrid_Detalji_Kalkulacije.Rows[e.RowIndex].Cells[3].Value.ToString();
+                textKolicina.Text = dataGrid_Detalji_Kalkulacije.Rows[e.RowIndex].Cells[4].Value.ToString();
+                textNab_Cena.Text = dataGrid_Detalji_Kalkulacije.Rows[e.RowIndex].Cells[6].Value.ToString();
+                textNab_Vrednost.Text = dataGrid_Detalji_Kalkulacije.Rows[e.RowIndex].Cells[7].Value.ToString();
+                textMarza.Text = dataGrid_Detalji_Kalkulacije.Rows[e.RowIndex].Cells[8].Value.ToString();
+                textProd_Cena.Text = dataGrid_Detalji_Kalkulacije.Rows[e.RowIndex].Cells[9].Value.ToString();
+                textPDV_Stopa.Text = dataGrid_Detalji_Kalkulacije.Rows[e.RowIndex].Cells[10].Value.ToString();
+                textProd_Cena_sa_PDV.Text = dataGrid_Detalji_Kalkulacije.Rows[e.RowIndex].Cells[11].Value.ToString();
+                textProd_Vred_sa_PDV.Text = dataGrid_Detalji_Kalkulacije.Rows[e.RowIndex].Cells[12].Value.ToString();
+            }
+            else if (ime_kolone_pp_a == "Delete_Detalji")
+            {
+                try
+                {
+
+                    if (MessageBox.Show("Da li ste sigurni da želite da izbrišete selektovani red?", "Brisanje Radnika", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        cn.Open();
+                        cm = new SqlCommand("DELETE FROM DETALJI_DOKUMENTA" +
+                         " WHERE id = " + dataGrid_Detalji_Kalkulacije.Rows[e.RowIndex].Cells[1].Value.ToString() + "", cn);
+                        cm.ExecuteNonQuery();
+                        cn.Close();
+                        MessageBox.Show("Red je uspesno izbrisan", "Obaveštenje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Ucitaj_Artikle();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    cn.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
         public void Ucitaj_Artikle()
         {
             //Ucitavanje artikala, ako kasnije bude bilo potrebno
@@ -332,6 +413,42 @@ namespace Projekat_Prodavnica
             }
 
         }
+        void Pretrazi_Dokument()
+        {
+            int i = 0;
+            dataGrid_Zaglavlje_Kalkulacije.Rows.Clear();
+            cn.Open();
+            cm = new SqlCommand("Select zd.id as id, zd.broj_dokumenta as broj_dokumenta, zd.nacin_placanja as nacin_placanja, " +
+            "pp.naziv_pp as naziv_pp_a, zd.datum_dokumenta as datum_dokumenta, zd.napomena as napomena " +
+             "from ZAGLAVLJE_DOKUMENTA as zd " +
+               "Left outer join POSLOVNI_PARTNERI as pp ON zd.id_poslovnog_partnera = pp.id " +
+               "WHERE datum_dokumenta BETWEEN '" + dtPretOd.Value.ToString("yyyy-MM-dd") + "' AND '" + dtPretDo.Value.ToString("yyyy-MM-dd") + "' " +
+                  "order by zd.id ", cn);
+            dr = cm.ExecuteReader();
+            while (dr.Read())
+            {
+                i += 1;
+                dataGrid_Zaglavlje_Kalkulacije.Rows.Add(i, dr["id"].ToString(), dr["broj_dokumenta"].ToString(),
+                dr["nacin_placanja"].ToString(), dr["naziv_pp_a"].ToString(),
+                dr["datum_dokumenta"].ToString(), dr["napomena"].ToString());
+            }
+            dr.Close();
+            cn.Close();
+            if (dataGrid_Detalji_Kalkulacije.Rows.Count != 0 && dataGrid_Detalji_Kalkulacije.Rows.Count != 1)
+            {
+                //Selekcija posledljeg reda i celije po redu, u za u gridu
+                int Indeks_Reda = dataGrid_Detalji_Kalkulacije.Rows.Count - 1;
+                int Indeks_Kolone = dataGrid_Detalji_Kalkulacije.Columns.Count - 1;
+                dataGrid_Detalji_Kalkulacije.Rows[Indeks_Reda].Selected = true;
+                dataGrid_Detalji_Kalkulacije.Rows[Indeks_Reda].Cells[Indeks_Kolone].Selected = true;
+                //In case if you want to scroll down as well.
+                dataGrid_Detalji_Kalkulacije.FirstDisplayedScrollingRowIndex = Indeks_Reda;
+            }
+        }
+        void Izmeni_Dokument()
+        {
+
+        }
 
         public Ulaz_Kalkulacija()
         {
@@ -356,7 +473,7 @@ namespace Projekat_Prodavnica
 
         private void btn_Pretrazi_Click(object sender, EventArgs e)
         {
-
+            Pretrazi_Dokument();
         }
 
         private void btn_Dodaj_Dokument_Click(object sender, EventArgs e)
