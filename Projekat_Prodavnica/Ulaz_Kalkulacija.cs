@@ -21,6 +21,7 @@ namespace Projekat_Prodavnica
         int id_zaglavlja_dokumenta, id_artikla;
 
         //Promenljive koje su potrebne za unos novog reda u detaljima
+        int id_poslovnog_partnera;
         string naziv_artikla, sifra_artikla, jedinica_mere;
         double kolicina, nabavna_cena, nabavna_vrednost, marza, vrednost_marze,
         ukupna_vrednost_marze, prodajna_cena,
@@ -32,7 +33,7 @@ namespace Projekat_Prodavnica
             id_zaglavlja_dokumenta =
             Int32.Parse(dataGrid_Zaglavlje_Kalkulacije.Rows[e.RowIndex].Cells[1].Value.ToString());
             Ucitaj_Detalje_Dokumenta();
-            int id_poslovnog_partnera;
+            //int id_poslovnog_partnera;
             string poslovni_partner_id;
             string ime_kolone_pp_a = dataGrid_Zaglavlje_Kalkulacije.Columns[e.ColumnIndex].Name;
             poslovni_partner_id = dataGrid_Zaglavlje_Kalkulacije.Rows[e.RowIndex].Cells[1].Value.ToString();
@@ -158,7 +159,6 @@ namespace Projekat_Prodavnica
 
         private void dataGrid_Detalji_Kalkulacije_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int id_poslovnog_partnera;
             string poslovni_partner_id;
             string ime_kolone_pp_a = dataGrid_Detalji_Kalkulacije.Columns[e.ColumnIndex].Name;
             poslovni_partner_id = dataGrid_Detalji_Kalkulacije.Rows[e.RowIndex].Cells[1].Value.ToString();
@@ -445,9 +445,92 @@ namespace Projekat_Prodavnica
                 dataGrid_Detalji_Kalkulacije.FirstDisplayedScrollingRowIndex = Indeks_Reda;
             }
         }
-        void Izmeni_Dokument()
+        void Izmeni_Zaglavlje()
         {
-
+            if (MessageBox.Show("Želite li zaista za izmenite podatke o Zaglavlju", "Podaci o Artiklu", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (textBrojDokumenta.Text != "")
+                {
+                    cn.Open();
+                    cm = new SqlCommand("UPDATE ZAGLAVLJE_DOKUMENTA set broj_dokumenta = @broj_dokumenta, " +
+                      "nacin_placanja = @nacin_placanja," +
+                      "id_poslovnog_partnera = @id_poslovnog_partnera, " +
+                      "datum_dokumenta = @datum_dokumenta, " +
+                      "napomena = @napomena, " +
+                      "vrsta_dokumenta = @vrsta_dokumenta " +
+                      " WHERE ID = @ID", cn);
+                    cm.Parameters.AddWithValue("@ID", id_poslovnog_partnera);
+                    cm.Parameters.AddWithValue("@broj_dokumenta", textBrojDokumenta.Text);
+                    cm.Parameters.AddWithValue("@nacin_placanja", cmbNacin_Placanja.SelectedItem);
+                    cm.Parameters.AddWithValue("@id_poslovnog_partnera", cmbNazivPP.SelectedValue);
+                    cm.Parameters.AddWithValue("@datum_dokumenta", dtDatumDokumenta.Value);
+                    cm.Parameters.AddWithValue("@napomena", textNapomena.Text);
+                    cm.Parameters.AddWithValue("@vrsta_dokumenta", vrsta_dokumenta);
+                    cm.ExecuteNonQuery();
+                    MessageBox.Show("Podaci su uspesno izmenjeni");
+                    textBrojDokumenta.Clear();
+                    cmbNacin_Placanja.SelectedIndex = 0;
+                    Ucitaj_Zaglavlje();
+                    cmbNazivPP.SelectedIndex = 0;
+                    textNapomena.Clear();
+                    cn.Close();
+                }
+            }
+        }
+        void Izmeni_Detalje()
+        {
+            if (MessageBox.Show("Želite li zaista za izmenite podatke o Detalju Dokumenta", "Podaci o Artiklu", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (textKolicina.Text != "")
+                {
+                    cn.Open();
+                    try
+                    {
+                        cm = new SqlCommand("UPDATE DETALJI_DOKUMENTA set id_zaglavlja = @id_zaglavlja, " +
+                          "id_artikla = @id_artikla," +
+                          "ulaz = @ulaz, " +
+                          "nab_cena = @nab_cena, " +
+                          "nab_vred = @nab_vred, " +
+                          "marza = @marza, " +
+                          "prod_cena = @prod_cena, " +
+                          "prod_cena_pdv = @prod_cena_pdv, " +
+                          "prod_vred_pdv = @prod_vred_pdv, " +
+                          "vred_pdv = @vred_pdv, " +
+                          "marza_vred = @marza_vred " +
+                          " WHERE ID = @ID", cn);
+                        cm.Parameters.AddWithValue("@ID", id_poslovnog_partnera);
+                        cm.Parameters.AddWithValue("@id_zaglavlja", id_zaglavlja_dokumenta);
+                        cm.Parameters.AddWithValue("@id_artikla", id_artikla);
+                        cm.Parameters.AddWithValue("@ulaz", kolicina);
+                        cm.Parameters.AddWithValue("@nab_cena", nabavna_cena);
+                        cm.Parameters.AddWithValue("@nab_vred", nabavna_vrednost);
+                        cm.Parameters.AddWithValue("@marza", marza);
+                        cm.Parameters.AddWithValue("@prod_cena", prodajna_cena);
+                        cm.Parameters.AddWithValue("@prod_cena_pdv", prod_cena_pdv);
+                        cm.Parameters.AddWithValue("@prod_vred_pdv", prod_vrednost_pdv);
+                        cm.Parameters.AddWithValue("@vred_pdv", ukupna_vrednost_pdv);
+                        cm.Parameters.AddWithValue("@marza_vred", ukupna_vrednost_marze);
+                        cm.ExecuteNonQuery();
+                        MessageBox.Show("Podaci su uspesno izmenjeni");
+                        cmbNazivArtikla.SelectedIndex = 0;
+                        textKolicina.Clear();
+                        textNab_Cena.Clear();
+                        textMarza.Clear();
+                        textNab_Vrednost.Clear();
+                        textProd_Cena.Clear();
+                        textPDV_Stopa.Clear();
+                        textProd_Cena_sa_PDV.Clear();
+                        textProd_Vred_sa_PDV.Clear();
+                        cn.Close();
+                        Ucitaj_Detalje_Dokumenta();
+                    }
+                    catch (Exception ex)
+                    {
+                        cn.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
         }
 
         public Ulaz_Kalkulacija()
@@ -484,7 +567,7 @@ namespace Projekat_Prodavnica
 
         private void btn_Izmeni_Dokument_Click(object sender, EventArgs e)
         {
-
+            Izmeni_Detalje();
         }
 
         private void btn_Dodaj_Zaglavlje_Click(object sender, EventArgs e)
@@ -494,7 +577,7 @@ namespace Projekat_Prodavnica
 
         private void btnIzmeni_Zaglavlje_Click(object sender, EventArgs e)
         {
-
+            Izmeni_Zaglavlje();
         }
     }
 }
