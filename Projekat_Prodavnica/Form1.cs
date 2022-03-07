@@ -30,5 +30,11 @@ namespace Projekat_Prodavnica
             Ulaz_Kalkulacija Uk = new Ulaz_Kalkulacija();
             Uk.Show();
         }
+
+        private void racunOtpremniceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Izlaz_Kalkulacije izlaz = new Izlaz_Kalkulacije();
+            izlaz.Show();
+        }
     }
 }

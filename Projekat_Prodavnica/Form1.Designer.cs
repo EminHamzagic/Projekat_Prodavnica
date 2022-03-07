@@ -76,28 +76,28 @@
             // radniciToolStripMenuItem
             // 
             this.radniciToolStripMenuItem.Name = "radniciToolStripMenuItem";
-            this.radniciToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.radniciToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.radniciToolStripMenuItem.Text = "Radnici";
             this.radniciToolStripMenuItem.Click += new System.EventHandler(this.radniciToolStripMenuItem_Click);
             // 
             // poslovniPArtneriToolStripMenuItem
             // 
             this.poslovniPArtneriToolStripMenuItem.Name = "poslovniPArtneriToolStripMenuItem";
-            this.poslovniPArtneriToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.poslovniPArtneriToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.poslovniPArtneriToolStripMenuItem.Text = "Poslovni Partneri";
             this.poslovniPArtneriToolStripMenuItem.Click += new System.EventHandler(this.poslovniPArtneriToolStripMenuItem_Click);
             // 
             // artikliToolStripMenuItem
             // 
             this.artikliToolStripMenuItem.Name = "artikliToolStripMenuItem";
-            this.artikliToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.artikliToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.artikliToolStripMenuItem.Text = "Artikli";
             this.artikliToolStripMenuItem.Click += new System.EventHandler(this.artikliToolStripMenuItem_Click);
             // 
             // podaciOFirmiToolStripMenuItem
             // 
             this.podaciOFirmiToolStripMenuItem.Name = "podaciOFirmiToolStripMenuItem";
-            this.podaciOFirmiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.podaciOFirmiToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.podaciOFirmiToolStripMenuItem.Text = "Podaci o Firmi";
             // 
             // izvestajiToolStripMenuItem
@@ -139,6 +139,7 @@
             this.racunOtpremniceToolStripMenuItem.Name = "racunOtpremniceToolStripMenuItem";
             this.racunOtpremniceToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.racunOtpremniceToolStripMenuItem.Text = "Racun - Otpremnice";
+            this.racunOtpremniceToolStripMenuItem.Click += new System.EventHandler(this.racunOtpremniceToolStripMenuItem_Click);
             // 
             // cenovnikRobeToolStripMenuItem
             // 

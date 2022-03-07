@@ -60,8 +60,8 @@ namespace Projekat_Prodavnica
             while (dr.Read())
             {
                 i += 1;
-                dataGrid_Artikli.Rows.Add(i, dr["id"].ToString(), dr["naziv_artikla"].ToString(),
-                dr["sifra_artikla"].ToString(), dr["jedinica_mere"].ToString(),
+                dataGrid_Artikli.Rows.Add(i, dr["id"].ToString(), dr["sifra_artikla"].ToString(),
+                dr["naziv_artikla"].ToString(), dr["jedinica_mere"].ToString(),
                 dr["stopa_poreska"].ToString(), dr["vrsta_artikla"].ToString(),
                 dr["barkod"].ToString());
             }
