@@ -159,13 +159,13 @@
             // zaradeRadnikaToolStripMenuItem
             // 
             this.zaradeRadnikaToolStripMenuItem.Name = "zaradeRadnikaToolStripMenuItem";
-            this.zaradeRadnikaToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.zaradeRadnikaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.zaradeRadnikaToolStripMenuItem.Text = "Zarade Radnika";
             // 
             // ostaliTroskoviToolStripMenuItem
             // 
             this.ostaliTroskoviToolStripMenuItem.Name = "ostaliTroskoviToolStripMenuItem";
-            this.ostaliTroskoviToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.ostaliTroskoviToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ostaliTroskoviToolStripMenuItem.Text = "Ostali Troskovi";
             // 
             // iZvestajiToolStripMenuItem1
@@ -183,6 +183,7 @@
             this.karticaArtikalaToolStripMenuItem.Name = "karticaArtikalaToolStripMenuItem";
             this.karticaArtikalaToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.karticaArtikalaToolStripMenuItem.Text = "Kartica Artikala";
+            this.karticaArtikalaToolStripMenuItem.Click += new System.EventHandler(this.karticaArtikalaToolStripMenuItem_Click);
             // 
             // lagerListaToolStripMenuItem
             // 

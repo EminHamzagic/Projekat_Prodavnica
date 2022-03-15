@@ -36,5 +36,11 @@ namespace Projekat_Prodavnica
             Izlaz_Kalkulacije izlaz = new Izlaz_Kalkulacije();
             izlaz.Show();
         }
+
+        private void karticaArtikalaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Kartica_Artikla kartica_artikla = new Kartica_Artikla();
+            kartica_artikla.Show();
+        }
     }
 }
