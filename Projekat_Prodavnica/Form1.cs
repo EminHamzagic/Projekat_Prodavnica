@@ -42,5 +42,11 @@ namespace Projekat_Prodavnica
             Kartica_Artikla kartica_artikla = new Kartica_Artikla();
             kartica_artikla.Show();
         }
+
+        private void ostaliTroskoviToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Troskovi troskovi = new Troskovi();
+            troskovi.Show();
+        }
     }
 }
