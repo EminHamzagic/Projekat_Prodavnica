@@ -146,7 +146,7 @@ namespace Projekat_Prodavnica
                   " @prod_cena_izlaz, @prod_vred_izlaz, @rabat_stopa," +
                   " @prod_cena_sa_rabatom, @prod_cena_sa_rabatom_sa_PDV, " +
                   " @prod_vred_sa_rabatom, @prod_vred_sa_rabatom_sa_PDV, " +
-                  " @vred_pdv_sa_rabatom, @vred_marze_sa_rabatom) ", cn);
+                  " @vred_pdv_sa_rabatom, @vred_marze_sa_rabatom, @trosak, @opis_troska) ", cn);
                     cm.Parameters.AddWithValue("@id_zaglavlja", id_zaglavlja_dokumenta);
                     cm.Parameters.AddWithValue("@id_artikla", id_artikla);
                     cm.Parameters.AddWithValue("@izlaz", kolicina_izlaz);
@@ -159,6 +159,8 @@ namespace Projekat_Prodavnica
                     cm.Parameters.AddWithValue("@prod_vred_sa_rabatom_sa_PDV", prod_vred_sa_rabatom_sa_PDV);
                     cm.Parameters.AddWithValue("@vred_pdv_sa_rabatom", vred_pdv_sa_rabatom);
                     cm.Parameters.AddWithValue("@vred_marze_sa_rabatom", vred_marze_sa_rabatom);
+                    cm.Parameters.AddWithValue("@trosak", textTrosak.Text);
+                    cm.Parameters.AddWithValue("@opis_troska", textOpis_Troska.Text);
                     cm.ExecuteNonQuery();
 
                     MessageBox.Show(" Uspešno ste sačuvali red detalja dokumenta", " Unos Detalja", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -172,6 +174,8 @@ namespace Projekat_Prodavnica
                     textProd_Cena_sa_PDV_sa_Rabatom.Clear();
                     textProd_Vred_sa_PDV_Rabat_Racun.Clear();
                     textVred_Marze_sa_Rabat.Clear();
+                    textTrosak.Clear();
+                    textOpis_Troska.Clear();
                     //Fokusiramo se na sledeci artikal koji eventulano treba da se unse
                     cmbNazivArtikla_Racun.Focus();
                     cn.Close();
@@ -195,21 +199,11 @@ namespace Projekat_Prodavnica
             int i = 0;
             dataGrid_Detalji_Racun.Rows.Clear();
             cn.Open();
-            cm = new SqlCommand("SELECT sum(cast(nab_cena as int)) as trosak from DETALJI_DOKUMENTA where id_zaglavlja = " + id_zaglavlja_dokumenta, cn);
-            cm.ExecuteNonQuery();
-            dr = cm.ExecuteReader();
-            MessageBox.Show(id_zaglavlja_dokumenta.ToString());
-            int trosak = 0;
-            while (dr.Read())
-            {
-                trosak += Int32.Parse(dr["trosak"].ToString());
-            }
-            dr.Close();
             cm = new SqlCommand("SELECT det_dok.id, art.sifra_artikla, art.naziv_artikla, det_dok.izlaz, " +
             "art.jedinica_mere, det_dok.prod_cena_izlaz, det_dok.rabat_stopa, " +
             "det_dok.prod_cena_sa_rabatom, art.stopa_poreska, det_dok.prod_cena_sa_rabatom_sa_PDV, " +
             "det_dok.prod_vred_sa_rabatom, det_dok.prod_vred_sa_rabatom_sa_PDV, " +
-            "det_dok.vred_pdv_sa_rabatom, det_dok.vred_marze_sa_rabatom " +
+            "det_dok.vred_pdv_sa_rabatom, det_dok.vred_marze_sa_rabatom, det_dok.trosak, det_dok.opis_troska " +
             "FROM DETALJI_DOKUMENTA det_dok " +
             "LEFT OUTER JOIN ARTIKAL art ON det_dok.id_artikla = art.id " +
             "LEFT OUTER JOIN ZAGLAVLJE_DOKUMENTA zag_dok ON det_dok.id_zaglavlja = zag_dok.id " +
@@ -228,7 +222,7 @@ namespace Projekat_Prodavnica
                 dr["stopa_poreska"].ToString(), dr["prod_cena_sa_rabatom_sa_PDV"].ToString(),
                 dr["prod_vred_sa_rabatom"].ToString(),
                 dr["prod_vred_sa_rabatom_sa_PDV"].ToString(),
-                dr["vred_pdv_sa_rabatom"].ToString(), dr["vred_marze_sa_rabatom"].ToString(), trosak);
+                dr["vred_pdv_sa_rabatom"].ToString(), dr["vred_marze_sa_rabatom"].ToString(), dr["trosak"].ToString(), dr["opis_troska"].ToString());
             }
             dr.Close();
             cn.Close();
@@ -442,7 +436,9 @@ namespace Projekat_Prodavnica
                           "prod_vred_sa_rabatom = @prod_vred_sa_rabatom, " +
                           "prod_vred_sa_rabatom_sa_PDV = @prod_vred_sa_rabatom_sa_PDV, " +
                           "vred_pdv_sa_rabatom = @vred_pdv_sa_rabatom, " +
-                          "vred_mazre_sa_rabatom = @vred_marze_sa_rabatom " +
+                          "vred_marze_sa_rabatom = @vred_marze_sa_rabatom, " +
+                          "trosak = @trosak, " +
+                          "opis_troska = @opis_troska " +
                           " WHERE ID = @ID", cn);
                         cm.Parameters.AddWithValue("@ID", id_poslovnog_partnera);
                         cm.Parameters.AddWithValue("@id_zaglavlja", id_zaglavlja_dokumenta);
@@ -457,6 +453,8 @@ namespace Projekat_Prodavnica
                         cm.Parameters.AddWithValue("@prod_vred_sa_rabatom_sa_PDV", prod_vred_sa_rabatom_sa_PDV);
                         cm.Parameters.AddWithValue("@vred_pdv_sa_rabatom", vred_pdv_sa_rabatom);
                         cm.Parameters.AddWithValue("@vred_marze_sa_rabatom", vred_marze_sa_rabatom);
+                        cm.Parameters.AddWithValue("@trosak", textTrosak.Text);
+                        cm.Parameters.AddWithValue("@opis_troska", textOpis_Troska.Text);
                         cm.ExecuteNonQuery();
 
                         MessageBox.Show(" Uspešno ste sačuvali red detalja dokumenta", " Unos Detalja", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -588,7 +586,6 @@ namespace Projekat_Prodavnica
             pronadju i ostale vrednosti cena potrebne za dalji rad
             */
             dr.Close();
-            MessageBox.Show(max_id_detalja);
             cm = new SqlCommand("select id, id_artikla, prod_cena_izlaz, prod_cena " +
             "from DETALJI_DOKUMENTA " +
             "where id = " + Int32.Parse(max_id_detalja), cn);
