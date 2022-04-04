@@ -48,5 +48,11 @@ namespace Projekat_Prodavnica
             Troskovi troskovi = new Troskovi();
             troskovi.Show();
         }
+
+        private void zaradeRadnikaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Zarade_Radnika zaradeRadnika = new Zarade_Radnika();
+            zaradeRadnika.Show();
+        }
     }
 }

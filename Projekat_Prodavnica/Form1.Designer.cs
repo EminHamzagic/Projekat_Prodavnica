@@ -161,6 +161,7 @@
             this.zaradeRadnikaToolStripMenuItem.Name = "zaradeRadnikaToolStripMenuItem";
             this.zaradeRadnikaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.zaradeRadnikaToolStripMenuItem.Text = "Zarade Radnika";
+            this.zaradeRadnikaToolStripMenuItem.Click += new System.EventHandler(this.zaradeRadnikaToolStripMenuItem_Click);
             // 
             // ostaliTroskoviToolStripMenuItem
             // 
