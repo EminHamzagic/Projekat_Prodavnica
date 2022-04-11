@@ -613,6 +613,7 @@
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "Id";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
             // 
             // Naziv_PP
             // 
@@ -670,6 +671,7 @@
             // 
             this.Column6.HeaderText = "Id";
             this.Column6.Name = "Column6";
+            this.Column6.Visible = false;
             // 
             // dataGridViewTextBoxColumn3
             // 

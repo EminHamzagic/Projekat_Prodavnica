@@ -33,17 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Radnici));
             this.dataGrid_Radnici = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ime_prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JMBG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.v_radinka = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.k_ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lozinka = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mesecna_Zarada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit_Radnika = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Delete_Radnika = new System.Windows.Forms.DataGridViewImageColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -63,6 +52,17 @@
             this.btn_Pretrazi_Radnika = new System.Windows.Forms.Button();
             this.btnNovi_Radnik = new System.Windows.Forms.Button();
             this.btnIzmeni = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ime_prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JMBG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.v_radinka = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.k_ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lozinka = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mesecna_Zarada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit_Radnika = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Delete_Radnika = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Radnici)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,72 +118,6 @@
             this.dataGrid_Radnici.Size = new System.Drawing.Size(804, 224);
             this.dataGrid_Radnici.TabIndex = 85;
             this.dataGrid_Radnici.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Radnici_CellContentClick);
-            // 
-            // id
-            // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.id.HeaderText = "#";
-            this.id.Name = "id";
-            this.id.Width = 39;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // ime_prezime
-            // 
-            this.ime_prezime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ime_prezime.HeaderText = "Ime i Prezime";
-            this.ime_prezime.Name = "ime_prezime";
-            // 
-            // JMBG
-            // 
-            this.JMBG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.JMBG.HeaderText = "JMBG";
-            this.JMBG.Name = "JMBG";
-            this.JMBG.Width = 64;
-            // 
-            // v_radinka
-            // 
-            this.v_radinka.HeaderText = "Vrsta Radnika";
-            this.v_radinka.Name = "v_radinka";
-            // 
-            // k_ime
-            // 
-            this.k_ime.HeaderText = "Kor. Ime";
-            this.k_ime.Name = "k_ime";
-            // 
-            // lozinka
-            // 
-            this.lozinka.HeaderText = "Lozinka";
-            this.lozinka.Name = "lozinka";
-            // 
-            // adresa
-            // 
-            this.adresa.HeaderText = "Adresa";
-            this.adresa.Name = "adresa";
-            // 
-            // Mesecna_Zarada
-            // 
-            this.Mesecna_Zarada.HeaderText = "Mesecna Zarada";
-            this.Mesecna_Zarada.Name = "Mesecna_Zarada";
-            // 
-            // Edit_Radnika
-            // 
-            this.Edit_Radnika.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Edit_Radnika.HeaderText = "";
-            this.Edit_Radnika.Image = ((System.Drawing.Image)(resources.GetObject("Edit_Radnika.Image")));
-            this.Edit_Radnika.Name = "Edit_Radnika";
-            this.Edit_Radnika.Width = 5;
-            // 
-            // Delete_Radnika
-            // 
-            this.Delete_Radnika.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Delete_Radnika.HeaderText = "";
-            this.Delete_Radnika.Image = ((System.Drawing.Image)(resources.GetObject("Delete_Radnika.Image")));
-            this.Delete_Radnika.Name = "Delete_Radnika";
-            this.Delete_Radnika.Width = 5;
             // 
             // label1
             // 
@@ -345,6 +279,73 @@
             this.btnIzmeni.Text = "Izmeni";
             this.btnIzmeni.UseVisualStyleBackColor = true;
             this.btnIzmeni.Click += new System.EventHandler(this.btnIzmeni_Click);
+            // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.id.HeaderText = "#";
+            this.id.Name = "id";
+            this.id.Width = 39;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // ime_prezime
+            // 
+            this.ime_prezime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ime_prezime.HeaderText = "Ime i Prezime";
+            this.ime_prezime.Name = "ime_prezime";
+            // 
+            // JMBG
+            // 
+            this.JMBG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.JMBG.HeaderText = "JMBG";
+            this.JMBG.Name = "JMBG";
+            this.JMBG.Width = 64;
+            // 
+            // v_radinka
+            // 
+            this.v_radinka.HeaderText = "Vrsta Radnika";
+            this.v_radinka.Name = "v_radinka";
+            // 
+            // k_ime
+            // 
+            this.k_ime.HeaderText = "Kor. Ime";
+            this.k_ime.Name = "k_ime";
+            // 
+            // lozinka
+            // 
+            this.lozinka.HeaderText = "Lozinka";
+            this.lozinka.Name = "lozinka";
+            // 
+            // adresa
+            // 
+            this.adresa.HeaderText = "Adresa";
+            this.adresa.Name = "adresa";
+            // 
+            // Mesecna_Zarada
+            // 
+            this.Mesecna_Zarada.HeaderText = "Mesecna Zarada";
+            this.Mesecna_Zarada.Name = "Mesecna_Zarada";
+            // 
+            // Edit_Radnika
+            // 
+            this.Edit_Radnika.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Edit_Radnika.HeaderText = "";
+            this.Edit_Radnika.Image = ((System.Drawing.Image)(resources.GetObject("Edit_Radnika.Image")));
+            this.Edit_Radnika.Name = "Edit_Radnika";
+            this.Edit_Radnika.Width = 5;
+            // 
+            // Delete_Radnika
+            // 
+            this.Delete_Radnika.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Delete_Radnika.HeaderText = "";
+            this.Delete_Radnika.Image = ((System.Drawing.Image)(resources.GetObject("Delete_Radnika.Image")));
+            this.Delete_Radnika.Name = "Delete_Radnika";
+            this.Delete_Radnika.Width = 5;
             // 
             // frm_Radnici
             // 

@@ -33,14 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Zarade_Radnika));
             this.dataGrid_ZaradeRadnika = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ime_prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JMBG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.v_radinka = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.k_ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit_Radnika = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Delete_Radnika = new System.Windows.Forms.DataGridViewImageColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbRadnik = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,6 +44,14 @@
             this.btnUcitaj = new System.Windows.Forms.Button();
             this.btnDodaj = new System.Windows.Forms.Button();
             this.btnIzmeni = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ime_prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JMBG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.v_radinka = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.k_ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit_Radnika = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Delete_Radnika = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_ZaradeRadnika)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,58 +104,6 @@
             this.dataGrid_ZaradeRadnika.Size = new System.Drawing.Size(519, 224);
             this.dataGrid_ZaradeRadnika.TabIndex = 86;
             this.dataGrid_ZaradeRadnika.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_ZaradeRadnika_CellContentClick);
-            // 
-            // id
-            // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.id.HeaderText = "#";
-            this.id.Name = "id";
-            this.id.Width = 39;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // ime_prezime
-            // 
-            this.ime_prezime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ime_prezime.HeaderText = "Id Radnika";
-            this.ime_prezime.Name = "ime_prezime";
-            this.ime_prezime.Width = 85;
-            // 
-            // JMBG
-            // 
-            this.JMBG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.JMBG.HeaderText = "Period od";
-            this.JMBG.Name = "JMBG";
-            this.JMBG.Width = 82;
-            // 
-            // v_radinka
-            // 
-            this.v_radinka.HeaderText = "Period do";
-            this.v_radinka.Name = "v_radinka";
-            // 
-            // k_ime
-            // 
-            this.k_ime.HeaderText = "Iznos Zarade";
-            this.k_ime.Name = "k_ime";
-            // 
-            // Edit_Radnika
-            // 
-            this.Edit_Radnika.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Edit_Radnika.HeaderText = "";
-            this.Edit_Radnika.Image = ((System.Drawing.Image)(resources.GetObject("Edit_Radnika.Image")));
-            this.Edit_Radnika.Name = "Edit_Radnika";
-            this.Edit_Radnika.Width = 5;
-            // 
-            // Delete_Radnika
-            // 
-            this.Delete_Radnika.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Delete_Radnika.HeaderText = "";
-            this.Delete_Radnika.Image = ((System.Drawing.Image)(resources.GetObject("Delete_Radnika.Image")));
-            this.Delete_Radnika.Name = "Delete_Radnika";
-            this.Delete_Radnika.Width = 5;
             // 
             // label1
             // 
@@ -255,6 +203,58 @@
             this.btnIzmeni.UseVisualStyleBackColor = true;
             this.btnIzmeni.Click += new System.EventHandler(this.btnIzmeni_Click);
             // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.id.HeaderText = "#";
+            this.id.Name = "id";
+            this.id.Width = 39;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // ime_prezime
+            // 
+            this.ime_prezime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ime_prezime.HeaderText = "Ime i Prezime";
+            this.ime_prezime.Name = "ime_prezime";
+            // 
+            // JMBG
+            // 
+            this.JMBG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.JMBG.HeaderText = "Period od";
+            this.JMBG.Name = "JMBG";
+            this.JMBG.Width = 82;
+            // 
+            // v_radinka
+            // 
+            this.v_radinka.HeaderText = "Period do";
+            this.v_radinka.Name = "v_radinka";
+            // 
+            // k_ime
+            // 
+            this.k_ime.HeaderText = "Iznos Zarade";
+            this.k_ime.Name = "k_ime";
+            // 
+            // Edit_Radnika
+            // 
+            this.Edit_Radnika.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Edit_Radnika.HeaderText = "";
+            this.Edit_Radnika.Image = ((System.Drawing.Image)(resources.GetObject("Edit_Radnika.Image")));
+            this.Edit_Radnika.Name = "Edit_Radnika";
+            this.Edit_Radnika.Width = 5;
+            // 
+            // Delete_Radnika
+            // 
+            this.Delete_Radnika.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Delete_Radnika.HeaderText = "";
+            this.Delete_Radnika.Image = ((System.Drawing.Image)(resources.GetObject("Delete_Radnika.Image")));
+            this.Delete_Radnika.Name = "Delete_Radnika";
+            this.Delete_Radnika.Width = 5;
+            // 
             // Zarade_Radnika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -283,14 +283,6 @@
         #endregion
 
         public DataGridView dataGrid_ZaradeRadnika;
-        private DataGridViewTextBoxColumn id;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn ime_prezime;
-        private DataGridViewTextBoxColumn JMBG;
-        private DataGridViewTextBoxColumn v_radinka;
-        private DataGridViewTextBoxColumn k_ime;
-        private DataGridViewImageColumn Edit_Radnika;
-        private DataGridViewImageColumn Delete_Radnika;
         private Label label1;
         private ComboBox cmbRadnik;
         private Label label2;
@@ -302,5 +294,13 @@
         private Button btnUcitaj;
         private Button btnDodaj;
         private Button btnIzmeni;
+        private DataGridViewTextBoxColumn id;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn ime_prezime;
+        private DataGridViewTextBoxColumn JMBG;
+        private DataGridViewTextBoxColumn v_radinka;
+        private DataGridViewTextBoxColumn k_ime;
+        private DataGridViewImageColumn Edit_Radnika;
+        private DataGridViewImageColumn Delete_Radnika;
     }
 }

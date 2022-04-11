@@ -54,5 +54,11 @@ namespace Projekat_Prodavnica
             Zarade_Radnika zaradeRadnika = new Zarade_Radnika();
             zaradeRadnika.Show();
         }
+
+        private void obracunZaradaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OBRACUN_ZARADE obracun = new OBRACUN_ZARADE();
+            obracun.Show();
+        }
     }
 }

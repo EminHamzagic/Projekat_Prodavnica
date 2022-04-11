@@ -31,11 +31,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Troskovi));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Troskovi));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textOpis_Troska = new System.Windows.Forms.TextBox();
+            this.textTrosak = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.textVred_Marze_sa_Rabat = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.btn_Izmeni_Dokument = new System.Windows.Forms.Button();
@@ -50,25 +54,6 @@
             this.textKolicina_Racun = new System.Windows.Forms.TextBox();
             this.cmbNazivArtikla_Racun = new System.Windows.Forms.ComboBox();
             this.dataGrid_Detalji_Racun = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Prod_Cena = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dsd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit_Detalji = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Delete_Detalji = new System.Windows.Forms.DataGridViewImageColumn();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -107,10 +92,25 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit_Zaglavlje = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete_Zaglavlje = new System.Windows.Forms.DataGridViewImageColumn();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textTrosak = new System.Windows.Forms.TextBox();
-            this.textOpis_Troska = new System.Windows.Forms.TextBox();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Prod_Cena = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dsd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit_Detalji = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Delete_Detalji = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Detalji_Racun)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -152,6 +152,38 @@
             this.groupBox2.TabIndex = 133;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detalji - Troskovi";
+            // 
+            // textOpis_Troska
+            // 
+            this.textOpis_Troska.Location = new System.Drawing.Point(577, 89);
+            this.textOpis_Troska.Name = "textOpis_Troska";
+            this.textOpis_Troska.Size = new System.Drawing.Size(291, 23);
+            this.textOpis_Troska.TabIndex = 165;
+            // 
+            // textTrosak
+            // 
+            this.textTrosak.Location = new System.Drawing.Point(433, 89);
+            this.textTrosak.Name = "textTrosak";
+            this.textTrosak.Size = new System.Drawing.Size(66, 23);
+            this.textTrosak.TabIndex = 164;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(505, 92);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(70, 15);
+            this.label19.TabIndex = 163;
+            this.label19.Text = "Opis Troska:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(384, 92);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(43, 15);
+            this.label18.TabIndex = 162;
+            this.label18.Text = "Trosak:";
             // 
             // textVred_Marze_sa_Rabat
             // 
@@ -316,135 +348,6 @@
             this.dataGrid_Detalji_Racun.Size = new System.Drawing.Size(874, 140);
             this.dataGrid_Detalji_Racun.TabIndex = 136;
             this.dataGrid_Detalji_Racun.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Detalji_Racun_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.FillWeight = 90.32258F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "#";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Id";
-            this.Column6.Name = "Column6";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.FillWeight = 100.7444F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Sifra";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.FillWeight = 100.7444F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Naziv Artikla";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.FillWeight = 100.7444F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Kolicina";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn6.FillWeight = 100.7444F;
-            this.dataGridViewTextBoxColumn6.HeaderText = "Jed. Mere";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // Prod_Cena
-            // 
-            this.Prod_Cena.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Prod_Cena.FillWeight = 100.7444F;
-            this.Prod_Cena.HeaderText = "Prod. Cena";
-            this.Prod_Cena.Name = "Prod_Cena";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn7.FillWeight = 100.7444F;
-            this.dataGridViewTextBoxColumn7.HeaderText = "Rabat (%)";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn8.FillWeight = 100.7444F;
-            this.dataGridViewTextBoxColumn8.HeaderText = "Prod. Cena sa Rab.";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.FillWeight = 100.7444F;
-            this.Column1.HeaderText = "PDV-Stopa (%)";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.FillWeight = 100.7444F;
-            this.Column2.HeaderText = "Prod. Cena sa PDV sa Rab.";
-            this.Column2.Name = "Column2";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn9.FillWeight = 100.7444F;
-            this.dataGridViewTextBoxColumn9.HeaderText = "Prod. Vred. sa Rab.";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.FillWeight = 100.7444F;
-            this.Column3.HeaderText = "Prod. Vred sa PDV sa Rab.";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.FillWeight = 100.7444F;
-            this.Column4.HeaderText = "Vrednost PDV sa Rab.";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.FillWeight = 100.7444F;
-            this.Column5.HeaderText = "Marza Vred. sa Rab.";
-            this.Column5.Name = "Column5";
-            // 
-            // dsd
-            // 
-            this.dsd.HeaderText = "Iznos Troska";
-            this.dsd.Name = "dsd";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Detalji Troska";
-            this.Column8.Name = "Column8";
-            // 
-            // Edit_Detalji
-            // 
-            this.Edit_Detalji.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Edit_Detalji.HeaderText = "";
-            this.Edit_Detalji.Image = ((System.Drawing.Image)(resources.GetObject("Edit_Detalji.Image")));
-            this.Edit_Detalji.Name = "Edit_Detalji";
-            this.Edit_Detalji.Width = 5;
-            // 
-            // Delete_Detalji
-            // 
-            this.Delete_Detalji.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Delete_Detalji.HeaderText = "";
-            this.Delete_Detalji.Image = ((System.Drawing.Image)(resources.GetObject("Delete_Detalji.Image")));
-            this.Delete_Detalji.Name = "Delete_Detalji";
-            this.Delete_Detalji.Width = 5;
             // 
             // label14
             // 
@@ -775,6 +678,7 @@
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "Id";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
             // 
             // Naziv_PP
             // 
@@ -821,37 +725,135 @@
             this.Delete_Zaglavlje.Name = "Delete_Zaglavlje";
             this.Delete_Zaglavlje.Width = 5;
             // 
-            // label18
+            // dataGridViewTextBoxColumn2
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(384, 92);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(43, 15);
-            this.label18.TabIndex = 162;
-            this.label18.Text = "Trosak:";
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.FillWeight = 90.32258F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "#";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // label19
+            // Column6
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(505, 92);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(70, 15);
-            this.label19.TabIndex = 163;
-            this.label19.Text = "Opis Troska:";
+            this.Column6.HeaderText = "Id";
+            this.Column6.Name = "Column6";
+            this.Column6.Visible = false;
             // 
-            // textTrosak
+            // dataGridViewTextBoxColumn3
             // 
-            this.textTrosak.Location = new System.Drawing.Point(433, 89);
-            this.textTrosak.Name = "textTrosak";
-            this.textTrosak.Size = new System.Drawing.Size(66, 23);
-            this.textTrosak.TabIndex = 164;
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.FillWeight = 100.7444F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Sifra";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // textOpis_Troska
+            // dataGridViewTextBoxColumn4
             // 
-            this.textOpis_Troska.Location = new System.Drawing.Point(577, 89);
-            this.textOpis_Troska.Name = "textOpis_Troska";
-            this.textOpis_Troska.Size = new System.Drawing.Size(291, 23);
-            this.textOpis_Troska.TabIndex = 165;
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.FillWeight = 100.7444F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Naziv Artikla";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.FillWeight = 100.7444F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Kolicina";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.FillWeight = 100.7444F;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Jed. Mere";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // Prod_Cena
+            // 
+            this.Prod_Cena.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Prod_Cena.FillWeight = 100.7444F;
+            this.Prod_Cena.HeaderText = "Prod. Cena";
+            this.Prod_Cena.Name = "Prod_Cena";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn7.FillWeight = 100.7444F;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Rabat (%)";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn8.FillWeight = 100.7444F;
+            this.dataGridViewTextBoxColumn8.HeaderText = "Prod. Cena sa Rab.";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.FillWeight = 100.7444F;
+            this.Column1.HeaderText = "PDV-Stopa (%)";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.FillWeight = 100.7444F;
+            this.Column2.HeaderText = "Prod. Cena sa PDV sa Rab.";
+            this.Column2.Name = "Column2";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn9.FillWeight = 100.7444F;
+            this.dataGridViewTextBoxColumn9.HeaderText = "Prod. Vred. sa Rab.";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.FillWeight = 100.7444F;
+            this.Column3.HeaderText = "Prod. Vred sa PDV sa Rab.";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.FillWeight = 100.7444F;
+            this.Column4.HeaderText = "Vrednost PDV sa Rab.";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.FillWeight = 100.7444F;
+            this.Column5.HeaderText = "Marza Vred. sa Rab.";
+            this.Column5.Name = "Column5";
+            // 
+            // dsd
+            // 
+            this.dsd.HeaderText = "Iznos Troska";
+            this.dsd.Name = "dsd";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Detalji Troska";
+            this.Column8.Name = "Column8";
+            // 
+            // Edit_Detalji
+            // 
+            this.Edit_Detalji.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Edit_Detalji.HeaderText = "";
+            this.Edit_Detalji.Image = ((System.Drawing.Image)(resources.GetObject("Edit_Detalji.Image")));
+            this.Edit_Detalji.Name = "Edit_Detalji";
+            this.Edit_Detalji.Width = 5;
+            // 
+            // Delete_Detalji
+            // 
+            this.Delete_Detalji.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Delete_Detalji.HeaderText = "";
+            this.Delete_Detalji.Image = ((System.Drawing.Image)(resources.GetObject("Delete_Detalji.Image")));
+            this.Delete_Detalji.Name = "Delete_Detalji";
+            this.Delete_Detalji.Width = 5;
             // 
             // Troskovi
             // 
@@ -889,25 +891,6 @@
         private TextBox textKolicina_Racun;
         private ComboBox cmbNazivArtikla_Racun;
         public DataGridView dataGrid_Detalji_Racun;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private DataGridViewTextBoxColumn Prod_Cena;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn dsd;
-        private DataGridViewTextBoxColumn Column8;
-        private DataGridViewImageColumn Edit_Detalji;
-        private DataGridViewImageColumn Delete_Detalji;
         private Label label14;
         private Label label13;
         private Label label12;
@@ -937,6 +920,29 @@
         private Label label2;
         private Label label1;
         public DataGridView dataGrid_Zaglavlje_Racuna;
+        private TextBox textOpis_Troska;
+        private TextBox textTrosak;
+        private Label label19;
+        private Label label18;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private DataGridViewTextBoxColumn Prod_Cena;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn dsd;
+        private DataGridViewTextBoxColumn Column8;
+        private DataGridViewImageColumn Edit_Detalji;
+        private DataGridViewImageColumn Delete_Detalji;
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn Naziv_PP;
@@ -946,9 +952,5 @@
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewImageColumn Edit_Zaglavlje;
         private DataGridViewImageColumn Delete_Zaglavlje;
-        private TextBox textOpis_Troska;
-        private TextBox textTrosak;
-        private Label label19;
-        private Label label18;
     }
 }

@@ -194,6 +194,7 @@
             // 
             this.Column1.HeaderText = "Id";
             this.Column1.Name = "Column1";
+            this.Column1.Visible = false;
             // 
             // dataGridViewTextBoxColumn1
             // 

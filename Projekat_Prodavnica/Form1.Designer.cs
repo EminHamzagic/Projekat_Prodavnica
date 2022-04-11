@@ -47,6 +47,7 @@
             this.karticaArtikalaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lagerListaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.evidencijaProdajeTroskovaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.obracunZaradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,28 +77,28 @@
             // radniciToolStripMenuItem
             // 
             this.radniciToolStripMenuItem.Name = "radniciToolStripMenuItem";
-            this.radniciToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.radniciToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.radniciToolStripMenuItem.Text = "Radnici";
             this.radniciToolStripMenuItem.Click += new System.EventHandler(this.radniciToolStripMenuItem_Click);
             // 
             // poslovniPArtneriToolStripMenuItem
             // 
             this.poslovniPArtneriToolStripMenuItem.Name = "poslovniPArtneriToolStripMenuItem";
-            this.poslovniPArtneriToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.poslovniPArtneriToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.poslovniPArtneriToolStripMenuItem.Text = "Poslovni Partneri";
             this.poslovniPArtneriToolStripMenuItem.Click += new System.EventHandler(this.poslovniPArtneriToolStripMenuItem_Click);
             // 
             // artikliToolStripMenuItem
             // 
             this.artikliToolStripMenuItem.Name = "artikliToolStripMenuItem";
-            this.artikliToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.artikliToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.artikliToolStripMenuItem.Text = "Artikli";
             this.artikliToolStripMenuItem.Click += new System.EventHandler(this.artikliToolStripMenuItem_Click);
             // 
             // podaciOFirmiToolStripMenuItem
             // 
             this.podaciOFirmiToolStripMenuItem.Name = "podaciOFirmiToolStripMenuItem";
-            this.podaciOFirmiToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.podaciOFirmiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.podaciOFirmiToolStripMenuItem.Text = "Podaci o Firmi";
             // 
             // izvestajiToolStripMenuItem
@@ -106,7 +107,8 @@
             this.ulazToolStripMenuItem,
             this.izlazToolStripMenuItem,
             this.cenovnikRobeToolStripMenuItem,
-            this.troskoviToolStripMenuItem});
+            this.troskoviToolStripMenuItem,
+            this.obracunZaradaToolStripMenuItem});
             this.izvestajiToolStripMenuItem.Name = "izvestajiToolStripMenuItem";
             this.izvestajiToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.izvestajiToolStripMenuItem.Text = "Dokumenti";
@@ -199,6 +201,13 @@
             this.evidencijaProdajeTroskovaToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.evidencijaProdajeTroskovaToolStripMenuItem.Text = "Evidencija Prodaje - Troskova";
             // 
+            // obracunZaradaToolStripMenuItem
+            // 
+            this.obracunZaradaToolStripMenuItem.Name = "obracunZaradaToolStripMenuItem";
+            this.obracunZaradaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.obracunZaradaToolStripMenuItem.Text = "Obracun - Zarada";
+            this.obracunZaradaToolStripMenuItem.Click += new System.EventHandler(this.obracunZaradaToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -236,5 +245,6 @@
         private ToolStripMenuItem karticaArtikalaToolStripMenuItem;
         private ToolStripMenuItem lagerListaToolStripMenuItem;
         private ToolStripMenuItem evidencijaProdajeTroskovaToolStripMenuItem;
+        private ToolStripMenuItem obracunZaradaToolStripMenuItem;
     }
 }

@@ -54,12 +54,15 @@ namespace Projekat_Prodavnica
             int i = 0;
             dataGrid_ZaradeRadnika.Rows.Clear();
             cn.Open();
-            cm = new SqlCommand(" Select * from ZARADA_RADNIKA order by id", cn);
+            cm = new SqlCommand(" Select zd.id, r.ime_prezime, zd.period_od, zd.period_do, zd.iznos_zarade " +
+                "from ZARADA_RADNIKA as zd " +
+                "left outer join Radnik as r on zd.id_radnika = r.id " +
+                "order by zd.id", cn);
             dr = cm.ExecuteReader();
             while (dr.Read())
             {
                 i += 1;
-                dataGrid_ZaradeRadnika.Rows.Add(i, dr["id"].ToString(), dr["id_radnika"].ToString(),
+                dataGrid_ZaradeRadnika.Rows.Add(i, dr["id"].ToString(), dr["ime_prezime"].ToString(),
                 dr["period_od"].ToString(),
                 dr["period_do"].ToString(),
                 dr["iznos_zarade"].ToString());
