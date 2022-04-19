@@ -60,5 +60,11 @@ namespace Projekat_Prodavnica
             OBRACUN_ZARADE obracun = new OBRACUN_ZARADE();
             obracun.Show();
         }
+
+        private void evidencijaProdajeTroskovaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EvidencijaProdajeTroskova evidencija = new EvidencijaProdajeTroskova();
+            evidencija.Show();
+        }
     }
 }

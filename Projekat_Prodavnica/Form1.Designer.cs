@@ -43,11 +43,11 @@
             this.troskoviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zaradeRadnikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ostaliTroskoviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.obracunZaradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iZvestajiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.karticaArtikalaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lagerListaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.evidencijaProdajeTroskovaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.obracunZaradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,28 +77,28 @@
             // radniciToolStripMenuItem
             // 
             this.radniciToolStripMenuItem.Name = "radniciToolStripMenuItem";
-            this.radniciToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.radniciToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.radniciToolStripMenuItem.Text = "Radnici";
             this.radniciToolStripMenuItem.Click += new System.EventHandler(this.radniciToolStripMenuItem_Click);
             // 
             // poslovniPArtneriToolStripMenuItem
             // 
             this.poslovniPArtneriToolStripMenuItem.Name = "poslovniPArtneriToolStripMenuItem";
-            this.poslovniPArtneriToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.poslovniPArtneriToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.poslovniPArtneriToolStripMenuItem.Text = "Poslovni Partneri";
             this.poslovniPArtneriToolStripMenuItem.Click += new System.EventHandler(this.poslovniPArtneriToolStripMenuItem_Click);
             // 
             // artikliToolStripMenuItem
             // 
             this.artikliToolStripMenuItem.Name = "artikliToolStripMenuItem";
-            this.artikliToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.artikliToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.artikliToolStripMenuItem.Text = "Artikli";
             this.artikliToolStripMenuItem.Click += new System.EventHandler(this.artikliToolStripMenuItem_Click);
             // 
             // podaciOFirmiToolStripMenuItem
             // 
             this.podaciOFirmiToolStripMenuItem.Name = "podaciOFirmiToolStripMenuItem";
-            this.podaciOFirmiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.podaciOFirmiToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.podaciOFirmiToolStripMenuItem.Text = "Podaci o Firmi";
             // 
             // izvestajiToolStripMenuItem
@@ -118,7 +118,7 @@
             this.ulazToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sToolStripMenuItem});
             this.ulazToolStripMenuItem.Name = "ulazToolStripMenuItem";
-            this.ulazToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ulazToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.ulazToolStripMenuItem.Text = "Ulaz";
             // 
             // sToolStripMenuItem
@@ -133,7 +133,7 @@
             this.izlazToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.racunOtpremniceToolStripMenuItem});
             this.izlazToolStripMenuItem.Name = "izlazToolStripMenuItem";
-            this.izlazToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.izlazToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.izlazToolStripMenuItem.Text = "Izlaz";
             // 
             // racunOtpremniceToolStripMenuItem
@@ -146,7 +146,7 @@
             // cenovnikRobeToolStripMenuItem
             // 
             this.cenovnikRobeToolStripMenuItem.Name = "cenovnikRobeToolStripMenuItem";
-            this.cenovnikRobeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cenovnikRobeToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.cenovnikRobeToolStripMenuItem.Text = "Cenovnik Robe";
             // 
             // troskoviToolStripMenuItem
@@ -155,22 +155,29 @@
             this.zaradeRadnikaToolStripMenuItem,
             this.ostaliTroskoviToolStripMenuItem});
             this.troskoviToolStripMenuItem.Name = "troskoviToolStripMenuItem";
-            this.troskoviToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.troskoviToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.troskoviToolStripMenuItem.Text = "Troskovi";
             // 
             // zaradeRadnikaToolStripMenuItem
             // 
             this.zaradeRadnikaToolStripMenuItem.Name = "zaradeRadnikaToolStripMenuItem";
-            this.zaradeRadnikaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.zaradeRadnikaToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.zaradeRadnikaToolStripMenuItem.Text = "Zarade Radnika";
             this.zaradeRadnikaToolStripMenuItem.Click += new System.EventHandler(this.zaradeRadnikaToolStripMenuItem_Click);
             // 
             // ostaliTroskoviToolStripMenuItem
             // 
             this.ostaliTroskoviToolStripMenuItem.Name = "ostaliTroskoviToolStripMenuItem";
-            this.ostaliTroskoviToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ostaliTroskoviToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.ostaliTroskoviToolStripMenuItem.Text = "Ostali Troskovi";
             this.ostaliTroskoviToolStripMenuItem.Click += new System.EventHandler(this.ostaliTroskoviToolStripMenuItem_Click);
+            // 
+            // obracunZaradaToolStripMenuItem
+            // 
+            this.obracunZaradaToolStripMenuItem.Name = "obracunZaradaToolStripMenuItem";
+            this.obracunZaradaToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.obracunZaradaToolStripMenuItem.Text = "Obracun - Zarada";
+            this.obracunZaradaToolStripMenuItem.Click += new System.EventHandler(this.obracunZaradaToolStripMenuItem_Click);
             // 
             // iZvestajiToolStripMenuItem1
             // 
@@ -200,13 +207,7 @@
             this.evidencijaProdajeTroskovaToolStripMenuItem.Name = "evidencijaProdajeTroskovaToolStripMenuItem";
             this.evidencijaProdajeTroskovaToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.evidencijaProdajeTroskovaToolStripMenuItem.Text = "Evidencija Prodaje - Troskova";
-            // 
-            // obracunZaradaToolStripMenuItem
-            // 
-            this.obracunZaradaToolStripMenuItem.Name = "obracunZaradaToolStripMenuItem";
-            this.obracunZaradaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.obracunZaradaToolStripMenuItem.Text = "Obracun - Zarada";
-            this.obracunZaradaToolStripMenuItem.Click += new System.EventHandler(this.obracunZaradaToolStripMenuItem_Click);
+            this.evidencijaProdajeTroskovaToolStripMenuItem.Click += new System.EventHandler(this.evidencijaProdajeTroskovaToolStripMenuItem_Click);
             // 
             // Form1
             // 
