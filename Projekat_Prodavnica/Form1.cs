@@ -66,5 +66,34 @@ namespace Projekat_Prodavnica
             EvidencijaProdajeTroskova evidencija = new EvidencijaProdajeTroskova();
             evidencija.Show();
         }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            if (Login.TipProfila == "admin")
+            {
+                profiliToolStripMenuItem.Visible = true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var formToShow = Application.OpenForms.Cast<Form>().FirstOrDefault(c => c is Login);
+            if (formToShow != null)
+            {
+                formToShow.Show();
+            }
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddAccount add = new AddAccount();
+            add.Show();
+        }
     }
 }

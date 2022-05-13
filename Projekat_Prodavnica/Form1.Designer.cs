@@ -48,6 +48,9 @@
             this.karticaArtikalaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lagerListaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.evidencijaProdajeTroskovaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.profiliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +59,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.maticniPodaciToolStripMenuItem,
             this.izvestajiToolStripMenuItem,
-            this.iZvestajiToolStripMenuItem1});
+            this.iZvestajiToolStripMenuItem1,
+            this.profiliToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -209,15 +213,45 @@
             this.evidencijaProdajeTroskovaToolStripMenuItem.Text = "Evidencija Prodaje - Troskova";
             this.evidencijaProdajeTroskovaToolStripMenuItem.Click += new System.EventHandler(this.evidencijaProdajeTroskovaToolStripMenuItem_Click);
             // 
+            // profiliToolStripMenuItem
+            // 
+            this.profiliToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem});
+            this.profiliToolStripMenuItem.Name = "profiliToolStripMenuItem";
+            this.profiliToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.profiliToolStripMenuItem.Text = "Profili";
+            this.profiliToolStripMenuItem.Visible = false;
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(683, 395);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 43);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Logout";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "IS_Prodavnice";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -247,5 +281,8 @@
         private ToolStripMenuItem lagerListaToolStripMenuItem;
         private ToolStripMenuItem evidencijaProdajeTroskovaToolStripMenuItem;
         private ToolStripMenuItem obracunZaradaToolStripMenuItem;
+        private ToolStripMenuItem profiliToolStripMenuItem;
+        private ToolStripMenuItem editToolStripMenuItem;
+        private Button button1;
     }
 }
